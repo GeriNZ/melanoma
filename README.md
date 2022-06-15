@@ -1,16 +1,13 @@
 # Melanoma Detection Assignment
 > Project by Géraldine Bengsch (Third Upgrad Assignment) <br>
 >
-> This project uses multiclass classification model using a custom convolutional neural network in TensorFlow..
-> - Which variables are significant in predicting the price of a house
-> - How well the variables describe the price of a house
+> This project uses multiclass classification model using a custom convolutional neural network in TensorFlow.
 >
 > The project contains:
 > - Data Analysis notebook
 > - A folder containing images used (Visualisations are my own, picture is from Unsplash)
-> - The data set `train.csv`
-> - The data dictionary `datainfo.txt`
-> - Answers to the Subjective Questions in pdf format `SubjectiveQuestions.pdf`
+> - The data set as pictures from ISIC (augmented data set on Google drive, because Google Colab was used to run the notebook, here, only base set)
+
 
 
 ## Table of Contents
@@ -28,19 +25,24 @@
   
 
 
-
-
-
-
-
-
 - **General information:** 
 Problem statement: To build a CNN based model which can accurately detect melanoma. Melanoma is a type of cancer that can be deadly if not detected early. It accounts for 75% of skin cancer deaths. A solution that can evaluate images and alert dermatologists about the presence of melanoma has the potential to reduce a lot of manual effort needed in diagnosis.
+
 - **Background:** 
-A US-based housing company named Surprise Housing has decided to enter the Australian market. The company uses data analytics to purchase houses at a price below their actual values and flip them on at a higher price. For the same purpose, the company has collected a data set from the sale of houses in Australia. 
+Early skin cancer detection is important. Image Processing and machine vision have been increasingly used, including CNNS (Zhang et al., 2020).
+
 
 - **Business problem:**
-Aim is to model the price of houses with the available independent variables. This model will then be used by the management to understand how exactly the prices vary with the variables. They can accordingly manipulate the strategy of the firm and concentrate on areas that will yield high returns. Further, the model will be a good way for management to understand the pricing dynamics of a new market.
+Melanoma is the least common, but the most serious form of skin cancer which accounts for most deaths (75%) from the disease (Jain & Pise, 2015). Survival and cure for this cancer is high if detected early enough, but it is still a major concern, and dermatological issues are prevalent in the 21st century (Vijayalakshmi, 2019). Early detection is key, but still creates difficulties, even for speccilists. In addition, it is costly (Vijayalakshmi, 2019). Machine learning is proposed as a solution to help diagnosis, including CNNS (Zhang et al, 2020).
+
+
+References:
+Jain, S., & Pise, N. (2015). Computer aided melanoma skin cancer detection using image processing. Procedia Computer Science, 48, 735-740.
+
+Vijayalakshmi, M. M. (2019). Melanoma skin cancer detection using image processing and machine learning. International Journal of Trend in Scientific Research and Development (IJTSRD), 3(4), 780-784.
+
+Zhang, N., Cai, Y. X., Wang, Y. Y., Tian, Y. T., Wang, X. L., & Badami, B. (2020). Skin cancer diagnosis based on optimized convolutional neural network. Artificial intelligence in medicine, 102
+
 
 ## Project Pipeline/Assignment Steps performed in the notebook
 
@@ -72,10 +74,9 @@ Train the model for ~20 epochs
 
 ## Conclusions
 Please see the notebook for more detailed insights.
-1. `GrLivArea` is by far the most important predictor
-2. The top variables are intuitive.
-3. Lasso is the chosen model for the final model, because it creates a simple model with the top features.
-
+1. Base model: overfitted the data
+2. Second model: underfitted the data
+3. Third model: more balanced, but would benefit from additional hyperparameter tuning, and more training
 
 
 
@@ -86,10 +87,7 @@ Please see the notebook for more detailed insights.
 ![NumPy](https://img.shields.io/badge/NumPy-1.21.5-informational?style=flat&logoColor=white&color=2bbc8a)
 ![Pandas](https://img.shields.io/badge/Pandas-1.3.5-informational?style=flat&logoColor=white&color=2bbc8a)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-3.5.1-informational?style=flat&logoColor=white&color=2bbc8a)
-![Seaborn](https://img.shields.io/badge/Seaborn-0.11.2-informational?style=flat&logoColor=white&color=2bbc8a)
 ![sklearn](https://img.shields.io/badge/Sklearn-1.0.2-informational?style=flat&logoColor=white&color=2bbc8a)
-![statsmodels](https://img.shields.io/badge/statsmodels-0.13.1-informational?style=flat&logoColor=white&color=2bbc8a)
-![scipy](https://img.shields.io/badge/scipy-1.8.0-informational?style=flat&logoColor=white&color=2bbc8a)
 ![Tensorflow](https://img.shields.io/badge/tensorflow-2.9.0-informational?style=flat&logoColor=white&color=2bbc8a)
 ![Keras](https://img.shields.io/badge/keras-1.8.0-informational?style=flat&logoColor=white&color=2bbc8a)
 ![Pillow](https://img.shields.io/badge/pillow-1.8.0-informational?style=flat&logoColor=white&color=2bbc8a)
